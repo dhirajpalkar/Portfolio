@@ -124,7 +124,6 @@ body {
     background-size: 300%;
     background-image: var(--gradient);
     animation: bg-animation 15s infinite;
-    animation: bg-animation 15s infinite;
 }
 
 @keyframes bg-animation {
@@ -814,6 +813,7 @@ form {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        display: block;
     }
 
     .hero-title {
@@ -885,9 +885,13 @@ form {
     .container {
         padding: 0 15px;
     }
+    .hero{  
+        display: block;
+    }
 
     .hero-title {
         font-size: 2rem;
+        margin-top: 40px;
     }
 
     .hero-subtitle {
@@ -904,6 +908,9 @@ form {
 
     .project-tech,.hero-social {
         justify-content: center;
+    }
+    .hero-social {
+        margin-bottom: 20px;
     }
 }
 

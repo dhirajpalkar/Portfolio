@@ -220,14 +220,24 @@ window.addEventListener('load', () => {
     }
 });
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    // Only apply effect if screen width is more than 768px
+    if (window.innerWidth > 768) {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    } else {
+        // Optional: reset the transform on small screens
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = 'translateY(0)';
+        }
     }
 });
+
+
 
 // Skills animation on scroll
 const skillItems = document.querySelectorAll('.skill-item');
